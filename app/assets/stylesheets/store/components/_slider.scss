@@ -1,12 +1,13 @@
 #subheader {
   @include single-box-shadow(darken($c_green, 10), 0, 0, 15px, 0, true);
-  // background: image-url('store/subheader-bg.png') repeat center;
+  background: image-url('store/bg_graystripes.png') repeat center;
   background-color: lighten($c_green, 5);
   color: white;
-  border-top: 5px solid lighten($c_green, 40);
-  border-bottom: 5px solid lighten($c_green, 40);
+  border-top: 5px solid lighten($c_green, 20);
+  border-bottom: 5px solid lighten($c_green, 20);
   overflow: hidden;
-  
+  text-shadow: #333 0px 1px 0px;
+
   .subheader-wrapper {
     padding: 20px 10px;
     color: white;
@@ -16,7 +17,8 @@
       clear: both;
       color: white;
       font-size: 34px;
-      font-weight: 300;
+      font-weight: 700;
+      font-family: $bitter_font;
     }
   }
 }
@@ -35,7 +37,7 @@
       &.active, &:hover {
         background-color: $c_green;
       }
-    }  
+    }
   }
 }
 
@@ -51,7 +53,7 @@
     position: absolute;
     width: 100%;
     bottom: -20px;
-  } 
+  }
 }
 
 #latest-products, #featured-products {
@@ -71,7 +73,7 @@
       a {
         float: none;
         margin: 0 auto;
-      }  
+      }
     }
 
     .product-name {
@@ -120,7 +122,7 @@
 
       .product-title {
         color: white;
-        text-transform: uppercase;
+        text-transform: none;
         margin-bottom: 15px;
       }
 

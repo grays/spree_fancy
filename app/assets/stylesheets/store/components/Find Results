@@ -1,0 +1,503 @@
+Searching 118 files for "subheader" (regex)
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/assets/stylesheets/store/components/_slider.scss:
+    1: #subheader {
+    2    @include single-box-shadow(darken($c_green, 10), 0, 0, 15px, 0, true);
+    3    background: image-url('store/bg_graystripes.png') repeat center;
+    .
+    9    text-shadow: #333 0px 1px 0px;
+   10
+   11:   .subheader-wrapper {
+   12      padding: 20px 10px;
+   13      color: white;
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/assets/stylesheets/store/shared/_media.scss:
+  158      }
+  159
+  160:     #subheader .subheader-wrapper h1 {
+  161        font-size: 28px;
+  162      }
+  ...
+  311      }
+  312
+  313:     #subheader .subheader-wrapper h1[data-hook="checkout_title"] {
+  314        margin-top: 20px;
+  315      }
+  ...
+  375      }
+  376
+  377:     #subheader .subheader-wrapper h1 {
+  378        text-align: left;
+  379      }
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/overrides/spree/checkout/edit/move_checkout_header_to_layout_subheader.html.erb.deface:
+    1  <!-- surround_contents '[data-hook="checkout_header"]' -->
+    2: <% content_for :subheader do %>
+    3    <%= render_original %>
+    4  <% end %>
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/overrides/spree/checkout/registration/move_registration_page_title_to_subheader.html.erb.deface:
+    1  <!-- replace 'h1' -->
+    2: <% content_for :subheader do %>
+    3    <h1><%= t(:registration) %></h1>
+    4  <% end %>
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/overrides/spree/contact_us/contacts/new/move_contact_us_title_to_subheader.html.erb.deface:
+    1  <!-- surround 'h1' -->
+    2: <% content_for :subheader do %>
+    3    <%= render_original %>
+    4  <% end %>
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/overrides/spree/layouts/spree_application/add_subheader_to_layout.html.erb.deface:
+    2  <!-- sequence :after => 'unwrap_header_from_container_class' -->
+    3
+    4:   <div id="subheader">
+    5      <div class="container">
+    6:       <div class="subheader-wrapper">
+    7:         <%= yield :subheader %>
+    8        </div>
+    9      </div>
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/overrides/spree/layouts/spree_application/move_breadcrumb_inside_subheader.html.erb.deface:
+    1: <!-- insert_top '#subheader .subheader-wrapper' -->
+    2: <!-- sequence :after => 'add_subheader_to_layout' -->
+    3
+    4  <%= breadcrumbs(@taxon) %>
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/overrides/spree/layouts/spree_application/remove_breadcrumb_from_main_container.deface:
+    1  remove '#wrapper > code:contains("breadcrumbs(@taxon)")'
+    2: sequence :after => 'move_breadcrumb_inside_subheader'
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/overrides/spree/orders/edit/move_shopping_cart_title_to_subheader.html.erb.deface:
+    1  <!-- surround 'h1' -->
+    2: <% content_for :subheader do %>
+    3    <%= render_original %>
+    4  <% end %>
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/overrides/spree/products/index/add_products_index_title_to_subheader.html.erb.deface:
+    1  <!-- insert_before 'code:contains("content_for :sidebar do")' -->
+    2: <% content_for :subheader do %>
+    3    <h1 class="page-title">Shop</h1>
+    4  <% end %>
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/overrides/spree/products/show/add_products_show_title_to_subheader.html.erb.deface:
+    1  <!-- replace 'h1.product-title' -->
+    2: <% content_for :subheader do %>
+    3    <h1 class="product-title" itemprop="name"><%= accurate_title %></h1>
+    4  <% end %>
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/overrides/spree/static_content/show/move_page_name_to_subheader.html.erb.deface:
+    1  <!-- replace 'h1.taxon-title' -->
+    2: <% content_for :subheader do %>
+    3    <h1 class="taxon-title"><%= accurate_title %></h1>
+    4  <% end %>
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/overrides/spree/static_content/show/move_taxon_name_to_subheader.html.erb.deface:
+    1  <!-- replace 'h1' -->
+    2: <% content_for :subheader do %>
+    3    <h1><%= @page.title %></h1>
+    4  <% end %>
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/overrides/spree/taxons/show/move_taxon_name_to_subheader.html.erb.deface:
+    1  <!-- replace 'h1.taxon-title' -->
+    2: <% content_for :subheader do %>
+    3    <h1 class="taxon-title"><%= accurate_title %></h1>
+    4  <% end %>
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/overrides/spree/user_passwords/edit/move_change_password_form_title_to_subheader.html.erb.deface:
+    1  <!-- replace 'h2' -->
+    2: <% content_for :subheader do %>
+    3    <h1><%= t(:change_my_password) %></h1>
+    4  <% end %>
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/overrides/spree/user_passwords/new/move_password_reminder_form_title_to_subheader.html.erb.deface:
+    1  <!-- replace 'h6' -->
+    2  <% unless current_page?(checkout_registration_path) %>
+    3:   <% content_for :subheader do %>
+    4      <h1><%= t(:forgot_password) %></h1>
+    5    <% end %>
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/overrides/spree/user_registrations/new/move_registration_form_title_to_subheader.html.erb.deface:
+    1  <!-- replace 'h6' -->
+    2  <% unless current_page?(checkout_registration_path) %>
+    3:   <% content_for :subheader do %>
+    4      <h1><%= t(:new_customer) %></h1>
+    5    <% end %>
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/overrides/spree/user_sessions/new/move_login_form_title_to_subheader.html.erb.deface:
+    1  <!-- replace 'h6' -->
+    2  <% unless current_page?(checkout_registration_path) %>
+    3:   <% content_for :subheader do %>
+    4      <h1><%= t(:login_as_existing) %></h1>
+    5    <% end %>
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/overrides/spree/users/show/move_my_account_title_to_subheader.html.erb.deface:
+    1  <!-- replace 'h1.taxon-title' -->
+    2: <% content_for :subheader do %>
+    3    <h1 class="taxon-title"><%= accurate_title %></h1>
+    4  <% end %>
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/overrides/spree/users/show/move_taxon_name_to_subheader.html.erb.deface:
+    1  <!-- replace 'h1' -->
+    2: <% content_for :subheader do %>
+    3    <h1 class="page-title"><%= accurate_title %></h1>
+    4  <% end %>
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/views/spree/home/index.html.erb:
+    1: <% content_for :subheader do %>
+    2    <%= render 'slider' %>
+    3  <% end %>
+
+31 matches across 21 files
+
+
+Searching 118 files for "300" (regex)
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/assets/javascripts/store/spree_fancy.js:
+   55    var searchHoverConfig = {
+   56      over: function(){
+   57:       $("#search-bar").find('form').fadeIn('300');
+   58      },
+   59:     timeout: 300, // number = milliseconds delay before onMouseOut
+   60      out: function(){
+   61:       $("#search-bar").find("form").fadeOut('300');
+   62      }
+   63    };
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/assets/stylesheets/store/components/_slider.scss:
+   18        color: white;
+   19        font-size: 34px;
+   20:       font-weight: 300;
+   21      }
+   22    }
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/assets/stylesheets/store/shared/_media.scss:
+   98
+   99      .carousel li.four.columns {
+  100:       width: 300px !important;
+  101      }
+  102
+  ...
+  250
+  251        [data-hook="products_list_item"] {
+  252:         width: 300px !important;
+  253          margin: 0;
+  254          margin-bottom: 30px;
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/vendor/assets/fonts/icons.svg:
+   65  q-20 0 -38 19.5t-18 40.5v174q0 21 18 40.5t38 19.5h870zM225 26h560l-70 324h-420z" />
+   66      <glyph glyph-name="uniE848" unicode="&#xe848;" horiz-adv-x="1030"
+   67: d="M15 450q0 41 29.5 70.5t70.5 29.5h190v-310h350l6 2h4v-92q0 -41 -29.5 -70.5t-70.5 -29.5h-250l-150 -150v150h-50q-40 0 -70 30t-30 70v300zM915 800q42 0 71 -29t29 -71v-300q0 -41 -29.5 -70.5t-70.5 -29.5h-50v-150l-150 150h-350v400q0 41 29.5 70.5t70.5 29.5h450
+   68  z" />
+   69      <glyph glyph-name="uniE84C" unicode="&#xe84c;" horiz-adv-x="790"
+   ..
+   98  d="M579 280q16 -16 16 -41t-16 -41q-37 -38 -78 0l-196 188l-196 -188q-41 -38 -78 0q-16 16 -16 41t16 41l234 224q16 16 40 16t40 -16z" />
+   99      <glyph glyph-name="uniE889" unicode="&#xe889;" horiz-adv-x="1030"
+  100: d="M915 700q41 0 70.5 -29.5t29.5 -70.5v-500q0 -42 -29 -71t-71 -29h-800q-41 0 -70.5 29.5t-29.5 70.5v500q0 40 30 70t70 30h800zM915 400h-800v-300h800v300zM915 600h-800v-50h800v50zM245 294v-30h-30v30h30zM425 234v30h30v30h60v-30h-30v-30h-30v-30h-60v30h30z
+  101  M485 204v30h30v-30h-30zM305 204v30h60v-30h-60zM395 234h-30v60h60v-30h-30v-30zM275 234v-30h-60v30h30v30h30v30h60v-30h-30v-30h-30z" />
+  102      <glyph glyph-name="uniE8A0" unicode="&#xe8a0;" horiz-adv-x="610"
+  ...
+  125  q-7 -47 -31 -74q-23 -26 -23 -48q0 -60 35 -95q34 -34 127 -69z" />
+  126      <glyph glyph-name="uniE9A3" unicode="&#xe9a3;" horiz-adv-x="630"
+  127: d="M265 570v-90q0 -80 -80 -80h-90q-80 0 -80 80v90q0 80 80 80h90q80 0 80 -80zM615 570v-90q0 -80 -80 -80h-90q-80 0 -80 80v90q0 80 80 80h90q80 0 80 -80zM265 220v-90q0 -80 -80 -80h-90q-80 0 -80 80v90q0 80 80 80h90q80 0 80 -80zM535 300q80 0 80 -80v-90
+  128  q0 -80 -80 -80h-90q-80 0 -80 80v90q0 80 80 80h90z" />
+  129      <glyph glyph-name="uniE9A4" unicode="&#xe9a4;" horiz-adv-x="730"
+  ...
+  170  q-59 0 -101.5 -43.5t-42.5 -102.5q0 -39 20 -76q-4 -15 -4 -50q0 -104 72 -178t172 -74q34 0 46 4q30 -18 68 -18z" />
+  171      <glyph glyph-name="uniF601" unicode="&#xf601;" horiz-adv-x="930"
+  172: d="M865 650q19 0 34.5 -15t15.5 -35v-200h-500v250h450zM15 300h300v-250h-260q-40 0 -40 50v200zM915 100q0 -22 -14 -36t-36 -14h-450v250h500v-200zM15 600q0 50 40 50h260v-250h-300v200z" />
+  173      <glyph glyph-name="u1F4D1" unicode="&#x1f4d1;" horiz-adv-x="580"
+  174  d="M515 850q19 0 34.5 -15t15.5 -35v-850l-150 180v620q0 20 -15.5 35t-34.5 15h-100q0 50 40 50h210zM265 700q19 0 34.5 -15t15.5 -35v-800l-150 180l-150 -180v800q0 50 40 50h210z" />
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/vendor/assets/fonts/icons.woff:
+   25  d100 6030 087a 0000 789c 6360 6460 60e0
+   26  0362 0906 1060 6260 0442 6b20 6601 f318
+   27: 0006 d300 6e00 0000 789c 6360 6416 63fc
+   28  c2c0 cac0 c0d4 c5b4 9b81 81a1 0742 33de
+   29  6730 6464 028a 32b0 3133 c081 1043 4303
+   ..
+   98  886a d34a 1711 cc02 401b 8c3a 915e b6ed
+   99  b3dd 48af bc61 1797 7f08 8bab a89f d768
+  100: 495b 066e 96e6 5a7b 4531 3003 333a 50df
+  101  c427 577c 7f63 1d0e b630 360d f41d 3e6e
+  102  57fd f0b8 681b 916e 0196 f074 57da 6e5f
+
+16 matches across 5 files
+
+
+Searching 118 files for "300" (regex)
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/assets/javascripts/store/spree_fancy.js:
+   55    var searchHoverConfig = {
+   56      over: function(){
+   57:       $("#search-bar").find('form').fadeIn('300');
+   58      },
+   59:     timeout: 300, // number = milliseconds delay before onMouseOut
+   60      out: function(){
+   61:       $("#search-bar").find("form").fadeOut('300');
+   62      }
+   63    };
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/assets/stylesheets/store/shared/_media.scss:
+   98
+   99      .carousel li.four.columns {
+  100:       width: 300px !important;
+  101      }
+  102
+  ...
+  250
+  251        [data-hook="products_list_item"] {
+  252:         width: 300px !important;
+  253          margin: 0;
+  254          margin-bottom: 30px;
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/vendor/assets/fonts/icons.svg:
+   65  q-20 0 -38 19.5t-18 40.5v174q0 21 18 40.5t38 19.5h870zM225 26h560l-70 324h-420z" />
+   66      <glyph glyph-name="uniE848" unicode="&#xe848;" horiz-adv-x="1030"
+   67: d="M15 450q0 41 29.5 70.5t70.5 29.5h190v-310h350l6 2h4v-92q0 -41 -29.5 -70.5t-70.5 -29.5h-250l-150 -150v150h-50q-40 0 -70 30t-30 70v300zM915 800q42 0 71 -29t29 -71v-300q0 -41 -29.5 -70.5t-70.5 -29.5h-50v-150l-150 150h-350v400q0 41 29.5 70.5t70.5 29.5h450
+   68  z" />
+   69      <glyph glyph-name="uniE84C" unicode="&#xe84c;" horiz-adv-x="790"
+   ..
+   98  d="M579 280q16 -16 16 -41t-16 -41q-37 -38 -78 0l-196 188l-196 -188q-41 -38 -78 0q-16 16 -16 41t16 41l234 224q16 16 40 16t40 -16z" />
+   99      <glyph glyph-name="uniE889" unicode="&#xe889;" horiz-adv-x="1030"
+  100: d="M915 700q41 0 70.5 -29.5t29.5 -70.5v-500q0 -42 -29 -71t-71 -29h-800q-41 0 -70.5 29.5t-29.5 70.5v500q0 40 30 70t70 30h800zM915 400h-800v-300h800v300zM915 600h-800v-50h800v50zM245 294v-30h-30v30h30zM425 234v30h30v30h60v-30h-30v-30h-30v-30h-60v30h30z
+  101  M485 204v30h30v-30h-30zM305 204v30h60v-30h-60zM395 234h-30v60h60v-30h-30v-30zM275 234v-30h-60v30h30v30h30v30h60v-30h-30v-30h-30z" />
+  102      <glyph glyph-name="uniE8A0" unicode="&#xe8a0;" horiz-adv-x="610"
+  ...
+  125  q-7 -47 -31 -74q-23 -26 -23 -48q0 -60 35 -95q34 -34 127 -69z" />
+  126      <glyph glyph-name="uniE9A3" unicode="&#xe9a3;" horiz-adv-x="630"
+  127: d="M265 570v-90q0 -80 -80 -80h-90q-80 0 -80 80v90q0 80 80 80h90q80 0 80 -80zM615 570v-90q0 -80 -80 -80h-90q-80 0 -80 80v90q0 80 80 80h90q80 0 80 -80zM265 220v-90q0 -80 -80 -80h-90q-80 0 -80 80v90q0 80 80 80h90q80 0 80 -80zM535 300q80 0 80 -80v-90
+  128  q0 -80 -80 -80h-90q-80 0 -80 80v90q0 80 80 80h90z" />
+  129      <glyph glyph-name="uniE9A4" unicode="&#xe9a4;" horiz-adv-x="730"
+  ...
+  170  q-59 0 -101.5 -43.5t-42.5 -102.5q0 -39 20 -76q-4 -15 -4 -50q0 -104 72 -178t172 -74q34 0 46 4q30 -18 68 -18z" />
+  171      <glyph glyph-name="uniF601" unicode="&#xf601;" horiz-adv-x="930"
+  172: d="M865 650q19 0 34.5 -15t15.5 -35v-200h-500v250h450zM15 300h300v-250h-260q-40 0 -40 50v200zM915 100q0 -22 -14 -36t-36 -14h-450v250h500v-200zM15 600q0 50 40 50h260v-250h-300v200z" />
+  173      <glyph glyph-name="u1F4D1" unicode="&#x1f4d1;" horiz-adv-x="580"
+  174  d="M515 850q19 0 34.5 -15t15.5 -35v-850l-150 180v620q0 20 -15.5 35t-34.5 15h-100q0 50 40 50h210zM265 700q19 0 34.5 -15t15.5 -35v-800l-150 180l-150 -180v800q0 50 40 50h210z" />
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/vendor/assets/fonts/icons.woff:
+   25  d100 6030 087a 0000 789c 6360 6460 60e0
+   26  0362 0906 1060 6260 0442 6b20 6601 f318
+   27: 0006 d300 6e00 0000 789c 6360 6416 63fc
+   28  c2c0 cac0 c0d4 c5b4 9b81 81a1 0742 33de
+   29  6730 6464 028a 32b0 3133 c081 1043 4303
+   ..
+   98  886a d34a 1711 cc02 401b 8c3a 915e b6ed
+   99  b3dd 48af bc61 1797 7f08 8bab a89f d768
+  100: 495b 066e 96e6 5a7b 4531 3003 333a 50df
+  101  c427 577c 7f63 1d0e b630 360d f41d 3e6e
+  102  57fd f0b8 681b 916e 0196 f074 57da 6e5f
+
+15 matches across 4 files
+
+
+Searching 118 files for "font-weight" (regex)
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/assets/stylesheets/store/components/_navigation.scss:
+   45          border-bottom: 1px solid $c_blue;
+   46          text-transform: uppercase;
+   47:         font-weight: 600;
+   48
+   49          &:hover {
+   ..
+  136    li {
+  137      a {
+  138:       font-weight: 600 !important;
+  139
+  140        &:hover, &.active {
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/assets/stylesheets/store/components/_slider.scss:
+   18        color: white;
+   19        font-size: 34px;
+   20:       font-weight: 400;
+   21      }
+   22    }
+   ..
+  110    h1 {
+  111      font-size: 24px !important;
+  112:     font-weight: 600 !important;
+  113    }
+  114
+  ...
+  128        .product-price {
+  129          font-size: 48px;
+  130:         font-weight: 600;
+  131          margin-right: 25px;
+  132        }
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/assets/stylesheets/store/sections/_cart.scss:
+    2    color: $c_green !important;
+    3    font-size: 18px !important;
+    4:   font-weight: 600 !important;
+    5  }
+    6
+    7  .cart-item-price {
+    8:   font-weight: 400 !important;
+    9    font-size: 16px !important;
+   10  }
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/assets/stylesheets/store/sections/_checkout.scss:
+   39      label {
+   40        font-size: 14px;
+   41:       font-weight: 600;
+   42      }
+   43    }
+   ..
+   50    legend {
+   51      font-size: 16px !important;
+   52:     font-weight: 600 !important;
+   53    }
+   54  }
+   ..
+   62    h3 {
+   63      font-size: 16px !important;
+   64:     font-weight: 600;
+   65      color: $c_blue;
+   66      text-align: center;
+   ..
+   78    td {
+   79      font-size: 12px;
+   80:     font-weight: 600;
+   81
+   82      &:last-child, &:last-child span {
+   ..
+  108  #order_total {
+  109    color: $c_green !important;
+  110:   font-weight: 600 !important;
+  111  }
+  112
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/assets/stylesheets/store/shared/_layout.scss:
+   22
+   23    h1 {
+   24:     font-weight: 400;
+   25      color: $body_text_color;
+   26
+   ..
+   75    h3 {
+   76      text-align: center;
+   77:     font-weight: 400;
+   78      display: inline-block;
+   79      padding: 0 20px;
+   ..
+  120    a.info {
+  121      height: inherit;
+  122:     font-weight: 400;
+  123      color: $c_green;
+  124    }
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/assets/stylesheets/store/shared/_media.scss:
+  148        tbody tr td[data-hook="cart_item_price"],
+  149        tbody#line_items tr td[data-hook="cart_item_total"] {
+  150:         font-weight: 600 !important;
+  151        }
+  152        input[type="number"] {
+  ...
+  235        a.info {
+  236          font-size: 12px;
+  237:         font-weight: 600;
+  238        }
+  239        .product-image {
+  ...
+  330            margin-bottom: 0;
+  331            text-transform: none;
+  332:           font-weight: 600;
+  333            font-size: 12px;
+  334            width: auto !important;
+  ...
+  389        a.info {
+  390          font-size: 12px;
+  391:         font-weight: 600;
+  392        }
+  393        .product-image {
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/assets/stylesheets/store/shared/_print.scss:
+   28      .product-section-title {
+   29        font-size: 14pt;
+   30:       font-weight: bold;
+   31        border-bottom: 1px solid black;
+   32        margin-bottom: 5pt;
+   ..
+   62        display: block;
+   63        font-size: 18pt;
+   64:       font-weight: bold;
+   65        border-bottom: 1px solid black;
+   66      }
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/assets/stylesheets/store/shared/_tables.scss:
+    5
+    6      th {
+    7:       font-weight: 600;
+    8        font-size: 14px;
+    9      }
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/app/assets/stylesheets/store/shared/_typography.scss:
+   10
+   11  b, strong, dl dt {
+   12:   font-weight: 600;
+   13  }
+   14
+   15  h1, h2, h3, h4, h5, h6 {
+   16:   font-weight: 600;
+   17  }
+   18
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/vendor/assets/fonts/icons.svg:
+   11    <font-face
+   12      font-family="icons"
+   13:     font-weight="500"
+   14      font-stretch="normal"
+   15      units-per-em="1000"
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/vendor/assets/stylesheets/icons-ie7.css:
+    3    font-family: 'icons';
+    4    font-style: normal;
+    5:   font-weight: normal;
+    6  /* fix buttons height */
+    7    line-height: 1em;
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/vendor/assets/stylesheets/icons.scss:
+    5    src: font-url("icons.eot");
+    6    src: font-url("icons.eot?#iefix") format('embedded-opentype'), font-url("icons.woff") format('woff'), font-url("icons.ttf") format('truetype'), font-url("icons.svg#icons") format('svg');
+    7:   font-weight: normal;
+    8    font-style: normal;
+    9  }
+   ..
+   12    font-family: 'icons';
+   13    font-style: normal;
+   14:   font-weight: normal;
+   15    speak: none;
+   16    display: inline-block;
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/vendor/assets/stylesheets/jquery-ui-1.9.2.custom.css:
+   71  .ui-widget-content { border: 1px solid #dddddd; background: #ffffff url(images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x; color: #444444; }
+   72  .ui-widget-content a { color: #444444; }
+   73: .ui-widget-header { border: 1px solid #dddddd; background: #dddddd url(images/ui-bg_highlight-soft_50_dddddd_1x100.png) 50% 50% repeat-x; color: #444444; font-weight: bold; }
+   74  .ui-widget-header a { color: #444444; }
+   75
+   76  /* Interaction states
+   77  ----------------------------------*/
+   78: .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: 1px solid #dddddd; background: #f6f6f6 url(images/ui-bg_highlight-soft_100_f6f6f6_1x100.png) 50% 50% repeat-x; font-weight: bold; color: #0073ea; }
+   79  .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #0073ea; text-decoration: none; }
+   80: .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 1px solid #0073ea; background: #0073ea url(images/ui-bg_highlight-soft_25_0073ea_1x100.png) 50% 50% repeat-x; font-weight: bold; color: #ffffff; }
+   81  .ui-state-hover a, .ui-state-hover a:hover, .ui-state-hover a:link, .ui-state-hover a:visited { color: #ffffff; text-decoration: none; }
+   82: .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid #dddddd; background: #ffffff url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x; font-weight: bold; color: #ff0084; }
+   83  .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #ff0084; text-decoration: none; }
+   84
+   ..
+   90  .ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a { color: #222222; }
+   91  .ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text { color: #222222; }
+   92: .ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary { font-weight: bold; }
+   93: .ui-priority-secondary, .ui-widget-content .ui-priority-secondary,  .ui-widget-header .ui-priority-secondary { opacity: .7; filter:Alpha(Opacity=70); font-weight: normal; }
+   94  .ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
+   95  .ui-state-disabled .ui-icon { filter:Alpha(Opacity=35); } /* For IE8 - See #6059 */
+
+/Users/ambethia/Documents/store/.bundle/bundler/gems/spree_fancy-b848e00ece15/vendor/assets/stylesheets/jquery.bxslider.scss:
+   59  	font-size: .85em;
+   60  	font-family: Arial;
+   61: 	font-weight: bold;
+   62  	color: #666;
+   63  	padding-top: 20px;
+
+35 matches across 14 files

@@ -2,7 +2,7 @@ input[type="button"], input[type="submit"],
 button, .button, a.button, input[type="number"],
 input[type="text"], input[type="email"],
 input[type="password"], input[type="tel"],
-input[type="search"], 
+input[type="search"],
 textarea {
   @include border-radius(20px);
   @include box-shadow(none);
@@ -10,12 +10,12 @@ textarea {
   border-width: 3px;
   padding: 7px 20px;
   text-transform: uppercase;
-
+  background-color: lighten($c_green, 30);
 
   &:hover {
     background-color: $c_green;
     color: white;
-    border-color: lighten($c_green, 30);  
+    border-color: lighten($c_green, 30);
   }
 }
 
@@ -26,7 +26,7 @@ select {
 #billing, #shipping {
   select {
     width: 93%;
-  }  
+  }
 }
 
 input[type="number"],
@@ -38,19 +38,19 @@ input[type="search"], textarea {
   color: $body_text_color;
 
   &:hover {
-    background-color: white;  
+    background-color: white;
     color: $body_text_color;
   }
 }
 
 fieldset {
-  font-size: 14px !important;  
+  font-size: 14px !important;
 }
 
 form {
   p, .field {
-    padding: 0;  
-  }   
+    padding: 0;
+  }
 }
 
 label.ui-button {
@@ -60,11 +60,12 @@ label.ui-button {
   margin-right: 10px !important;
   margin-bottom: 10px;
   font-size: 12px;
-  background-image: none;    
+  background-image: none;
   color: $c_blue;
 
   &:hover {
     background-color: $c_blue;
+    border-color: lighten($c_blue, 30);
     color: white;
   }
 
@@ -76,7 +77,7 @@ label.ui-button {
 
   &:hover, &.ui-state-active {
     .price.diff {
-      color: lighten($c_blue, 30);  
-    }  
+      color: lighten($c_green, 30);
+    }
   }
 }
